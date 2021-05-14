@@ -9,7 +9,8 @@ para indicar onde está localizado o jdk do java. By Matheus.
 
 - Para subir um arquivo alterado, seguir esses passos: 
     1 - No terminal usar o comando git commit -am "Aqui é a descrição da alteração" 
-    2 - Ainda no terminal usar o comando git push origin main 
+    2 - Ainda no terminal usar o comando git push origin main
+    3 - Nós é brabo
 
 - Link para configuração do git
 
