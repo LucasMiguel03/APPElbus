@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-import { StatusBar, Platform,Text, ActivityIndicator } from 'react-native';
-import { StackActions, NavigationActions } from 'react-navigation';
-import { connect } from 'react-redux';
-import useAppBusaquiApi from '../../useAppBusaquiApi';
 import { 
   Container, 
   Header,  
@@ -15,7 +11,16 @@ import {
   ActionButton, 
   ActionButtonText, 
   LoadingArea  
-  } from './styled';
+} from './styled';
+
+import { StatusBar, Platform,Text, ActivityIndicator } from 'react-native';
+import { StackActions, NavigationActions } from 'react-navigation';
+import { connect } from 'react-redux';
+import useAppBusaquiApi from '../../services/useAppBusaquiApi';
+
+import color from '../../styles/color';
+
+
 
 const Page = (props) => {
     const  api = useAppBusaquiApi();
@@ -75,10 +80,18 @@ const Page = (props) => {
               <HeaderTitle>Bem-vindo ao Busaqui!!!</HeaderTitle>
             </Header>
         <Menu>
-            <MenuItem active={activeMenu == 'signin'} onPress={()=>setActiveMenu('signin')} underlayColor="transparent">
+            <MenuItem 
+              active={activeMenu == 'signin'} 
+              onPress={()=>setActiveMenu('signin')} 
+              underlayColor="transparent">
+
               <MenuItemText>Login</MenuItemText>
             </MenuItem>
-            <MenuItem active={activeMenu == 'signup'} onPress={()=>setActiveMenu('signup')} underlayColor="transparent">
+            <MenuItem 
+              active={activeMenu == 'signup'} 
+              onPress={()=>setActiveMenu('signup')} 
+              underlayColor="transparent">
+                
               <MenuItemText>Cadastrar</MenuItemText>
             </MenuItem>
         </Menu>
@@ -86,13 +99,33 @@ const Page = (props) => {
           <InputLabel>Nome</InputLabel>
         }
         {activeMenu == 'signup' &&
-          <Input editable={!loading} value={name} onChangeText={t=>setName(t)} placeholder="Digite seu nome" placeholderTextColor = "#394452" />
+          <Input 
+            editable={!loading} 
+            value={name} 
+            onChangeText={t=>setName(t)} 
+            placeholder="Digite seu nome" 
+            placeholderTextColor = {color.Cinza} />
         }
         <InputLabel>E-mail</InputLabel>
-        <Input editable={!loading} value={email} onChangeText={t=>setEmail(t)} keyboardType="email-address" autoCapitalize="none" placeholder="Digite seu e-mail" placeholderTextColor = "#394452" />
+        <Input 
+          editable={!loading} 
+          value={email} 
+          onChangeText={t=>setEmail(t)} 
+          keyboardType="email-address" 
+          autoCapitalize="none" 
+          placeholder="Digite seu e-mail" 
+          placeholderTextColor = {color.Cinza} />
         
         <InputLabel>Senha</InputLabel>
-        <Input editable={!loading} value={password} onChangeText={t=>setPassword (t)} placeholder="Digite sua senha"  placeholderTextColor = "#394452" secureTextEntry={true} />
+        <Input 
+          editable={!loading} 
+          value={password} 
+          onChangeText={t=>setPassword (t)} 
+          placeholder="Digite sua senha"  
+          placeholderTextColor = {color.Cinza}
+          secureTextEntry={true} 
+          style={{fontFamily: 'teste'}}/>
+          
         {activeMenu == 'signin' &&
           <ActionButton disabled={loading} onPress={handleSignIn}>
             <ActionButtonText>Login</ActionButtonText>
@@ -107,7 +140,7 @@ const Page = (props) => {
         
         {loading &&
           <LoadingArea>
-            <ActivityIndicator size="large" color="#FFF" />
+            <ActivityIndicator size="large" color= {color.Branco} />
           </LoadingArea>
         }
       </Container>
