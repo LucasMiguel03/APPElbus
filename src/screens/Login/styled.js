@@ -59,7 +59,7 @@ export const ActionButton = styled.TouchableHighlight`
     height: 56px;
     margin-left: 120px;
     margin-top: 10px;
-    margin-right: 100px
+    margin-right: 100px;
     background-color: #074DB6;
     justify-content: center;
     align-items: center;

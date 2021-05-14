@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.KeyboardAvoidingView`
     flex: 1;
-    background-image: url('');
+    /* background-image: url(''); */
 `;
 
 export const ActionButton = styled.TouchableHighlight`
@@ -10,12 +10,12 @@ export const ActionButton = styled.TouchableHighlight`
     height: 56px;
     margin-left: 120px;
     margin-top: 10px;
-    margin-right: 100px
+    margin-right: 100px;
     background-color: #074DB6;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    box-shadow: 0px 2px 2px #999
+    box-shadow: 0px 2px 2px #999;
     
 `;
 

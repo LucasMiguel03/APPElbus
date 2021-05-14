@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StatusBar, Platform,Text, ActivityIndicator } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
-import useAppBusaquiApi from '../../useAppBusaquiApi';
+import useAppBusaquiApi from '../../services/useAppBusaquiApi';
 import { 
   Container, 
   Header,  
@@ -86,13 +86,32 @@ const Page = (props) => {
           <InputLabel>Nome</InputLabel>
         }
         {activeMenu == 'signup' &&
-          <Input editable={!loading} value={name} onChangeText={t=>setName(t)} placeholder="Digite seu nome" placeholderTextColor = "#394452" />
+          <Input 
+            editable={!loading} 
+            value={name} 
+            onChangeText={t=>setName(t)} 
+            placeholder="Digite seu nome" 
+            placeholderTextColor = "#394452" />
         }
         <InputLabel>E-mail</InputLabel>
-        <Input editable={!loading} value={email} onChangeText={t=>setEmail(t)} keyboardType="email-address" autoCapitalize="none" placeholder="Digite seu e-mail" placeholderTextColor = "#394452" />
+        <Input 
+          editable={!loading} 
+          value={email} 
+          onChangeText={t=>setEmail(t)} 
+          keyboardType="email-address" 
+          autoCapitalize="none" 
+          placeholder="Digite seu e-mail" 
+          placeholderTextColor = "#394452" />
         
         <InputLabel>Senha</InputLabel>
-        <Input editable={!loading} value={password} onChangeText={t=>setPassword (t)} placeholder="Digite sua senha"  placeholderTextColor = "#394452" secureTextEntry={true} />
+        <Input 
+          editable={!loading} 
+          value={password} 
+          onChangeText={t=>setPassword (t)} 
+          placeholder="Digite sua senha"  
+          placeholderTextColor = "#394452" 
+          secureTextEntry={true} />
+          
         {activeMenu == 'signin' &&
           <ActionButton disabled={loading} onPress={handleSignIn}>
             <ActionButtonText>Login</ActionButtonText>

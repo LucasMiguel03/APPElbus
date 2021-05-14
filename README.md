@@ -14,3 +14,13 @@ para indicar onde está localizado o jdk do java. By Matheus.
 - Link para configuração do git
 
     https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+    *-------------------*
+    *ESTRUTURAÇÃO DO SRC*
+    *-------------------*
+
+    -ASSETS: Imagens, Icones
+    -STYLES: Cores, Fontes
+    -NAVIGATORS: Rotas
+    -REDUCERS: Conjunto de dados
+        
