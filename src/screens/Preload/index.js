@@ -34,7 +34,7 @@ const Preload = (props) => {
     return (
         <Container>
             <ActionButton onPress={handleSignUp}>
-                <ActionButtonText>IR</ActionButtonText>
+                <ActionButtonText>IR go</ActionButtonText>
             </ActionButton>
         </Container>
     );
