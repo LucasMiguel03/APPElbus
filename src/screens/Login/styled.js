@@ -73,6 +73,18 @@ export const ActionButtonText = styled.Text`
     font-size: 16px;
 `;
 
+export const LoadingArea = styled.View`
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+`;
+
 
 
 
