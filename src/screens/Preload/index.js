@@ -46,7 +46,7 @@ const Preload = (props) => {
 
     <ScreenInitialLogin> 
                 {/* Imagem da primeira tela de login */}
-      <ImagePontoGraal source={require('../../Assets/Images/ImagemGraal.png')} resizeMode="cover"/>    
+      <ImagePontoGraal source={require('../../assets/Images/ImagemGraal.png')} resizeMode="cover"/>    
         {/* Container da página */}   
         <ViewInitialLogin>
             {/* Container do conteúdo */}
@@ -54,7 +54,7 @@ const Preload = (props) => {
             {/* Container do logo Busaqui */}
                 <ViewStyleLogo>
                 {/* Logo transparente do Busaqui inserido na parte superior centralizada em linha */}
-                    <LogoBusaqui source={require('../../Assets/Images/Icons/Busaqui.png')}/>
+                    <LogoBusaqui source={require('../../assets/Images/Icons/Busaqui.png')}/>
                 </ViewStyleLogo>
                 {/* container do titulo */}
                 <ViewStyleTitle>
@@ -72,13 +72,13 @@ const Preload = (props) => {
                 </ViewStyleSubtitle>
                     <ButtomSubscribe
                         underlayColor={'#fff4'}
-                        onPress={()=> ('')}>
+                        onPress={handleSignUp}activeOpacity={0.4}>
                         {/* Texto do botão de entrar */}
                         <ButtomSubscribeText>Criar sua conta</ButtomSubscribeText>
                     </ButtomSubscribe>
                         {/* Container do botão de cadastrar */}
                         <ButtomSignIn
-                        onPress={()=> navigation.navigate('')} activeOpacity={0.4}>
+                        onPress={(Han)} >
                         {/* Texto do botão de cadastrar */}
                             <ButtomSignInText>Já tem conta?Entrar agora</ButtomSignInText>
                         </ButtomSignIn>

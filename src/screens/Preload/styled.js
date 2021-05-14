@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
  /* --------- Estilização e criação de components (tela do Login Inical)--------*/
 
      /* Estilização do Container */
-     export const ScreenInitialLogin = styled.SafeAreaView`
+  export const ScreenInitialLogin = styled.SafeAreaView`
      flex:1;
      justify-content:center;
      align-items:center;
