@@ -46,7 +46,7 @@ const Preload = (props) => {
 
     <ScreenInitialLogin> 
                 {/* Imagem da primeira tela de login */}
-      <ImagePontoGraal source={require('../../Assets/Images/ImageGraal.png')} resizeMode="cover"/>    
+      <ImagePontoGraal source={require('../../Assets/Images/ImagemGraal.png')} resizeMode="cover"/>    
         {/* Container da página */}   
         <ViewInitialLogin>
             {/* Container do conteúdo */}

@@ -12,7 +12,7 @@ import {View} from 'react-native';
       <Container>
           <ViewImage>
             <GPSImage
-            source={require('../../assets/Images/GPS.png')}/>
+            source={require('../../Assets/Images/GPS.png')}/>
           </ViewImage>
 
         <ViewTexto>
