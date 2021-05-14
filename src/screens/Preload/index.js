@@ -72,13 +72,13 @@ const Preload = (props) => {
                 </ViewStyleSubtitle>
                     <ButtomSubscribe
                         underlayColor={'#fff4'}
-                        onPress={handleSignUp}activeOpacity={0.4}>
+                        onPress={handleSignUp} activeOpacity={0.4}>
                         {/* Texto do botão de entrar */}
                         <ButtomSubscribeText>Criar sua conta</ButtomSubscribeText>
                     </ButtomSubscribe>
                         {/* Container do botão de cadastrar */}
                         <ButtomSignIn
-                        onPress={(Han)} >
+                         >
                         {/* Texto do botão de cadastrar */}
                             <ButtomSignInText>Já tem conta?Entrar agora</ButtomSignInText>
                         </ButtomSignIn>
