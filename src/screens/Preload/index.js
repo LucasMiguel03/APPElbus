@@ -46,7 +46,7 @@ const Preload = (props) => {
 
     <ScreenInitialLogin> 
                 {/* Imagem da primeira tela de login */}
-      <ImagePontoGraal source={require('../../Assets/Image/ImageGraal.png')} resizeMode="cover"/>    
+      <ImagePontoGraal source={require('../../Assets/Images/ImageGraal.png')} resizeMode="cover"/>    
         {/* Container da página */}   
         <ViewInitialLogin>
             {/* Container do conteúdo */}
@@ -54,7 +54,7 @@ const Preload = (props) => {
             {/* Container do logo Busaqui */}
                 <ViewStyleLogo>
                 {/* Logo transparente do Busaqui inserido na parte superior centralizada em linha */}
-                    <LogoBusaqui source={require('../../Assets/Image/busaqui.png')}/>
+                    <LogoBusaqui source={require('../../Assets/Images/Icons/Busaqui.png')}/>
                 </ViewStyleLogo>
                 {/* container do titulo */}
                 <ViewStyleTitle>
