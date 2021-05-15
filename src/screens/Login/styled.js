@@ -70,7 +70,7 @@ export const ActionButton = styled.TouchableHighlight`
 `;
 
 export const ActionButtonText = styled.Text`
-    color: #FFF;
+    color: ${color.Branco};
     font-size: 16px;
 `;
 
@@ -80,7 +80,7 @@ export const LoadingArea = styled.View`
     top:0;
     right:0;
     bottom:0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: ${color.Preto};
     z-index: 1;
     justify-content: center;
     align-items: center;
