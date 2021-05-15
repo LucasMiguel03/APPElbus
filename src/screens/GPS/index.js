@@ -1,6 +1,6 @@
-import React from 'react';
+ import React from 'react';
 
-import {View} from 'react-native';
+ import {View} from 'react-native';
 
   import {Container,GPSImage,ViewTexto,ViewImage,
           TextoGrandeGPS,ViewButtom,TextoPequenoGPS,

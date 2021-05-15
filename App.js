@@ -11,8 +11,7 @@ import GPS from './src/screens/GPS'
 export default () => (
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      {/* <MainStack /> */}
-      <GPS/>
+      <MainStack /> 
     </PersistGate>{/*Fim PersistGate */}
   </Provider>/*Fim Provider*/
 )/*Fim Export default*/
