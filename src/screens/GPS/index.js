@@ -25,6 +25,8 @@
           </TextoPequenoGPS>
         </ViewTexto>
         <ViewButtom>
+
+        {/* FUTURO COMPONENTE */}
           <ButtomGPS
           onpress={()=>{}}>
             <TextoButtom>
