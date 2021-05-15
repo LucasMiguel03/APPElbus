@@ -1,28 +1,37 @@
 import styled from 'styled-components/native';
 import color from '../../styles/color';
+import fonts from '../../styles/fonts';
 
 export const Container = styled.KeyboardAvoidingView`
     flex: 1;
     background-color: ${color.Branco};
 `;
 
-export const Header = styled.SafeAreaView`
-    height: 150px;
+export const HeaderContainer = styled.View`
+    /* height: 150px; */
+    height:30%;
     background-color: ${color.Azul};
-    justify-content: center;
+    justify-content: space-between;
+`;
+
+export const Header = styled.SafeAreaView`
+    justify-content:flex-end;
+    height: 50%;
 `;
 
 export const HeaderTitle = styled.Text`
     color: ${color.Branco};
     font-size: 27px;
-    padding-left: 20px;
+    /* padding-left: 20px; */
+    left: 20px;
+    font-family: ${fonts.SemiBold};
 `;
 
 export const Menu = styled.View`
     background-color: ${color.Azul};
     flex-direction: row;
     padding-left: 20px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 `;
 export const MenuItem = styled.TouchableHighlight`
     padding: 20px;
@@ -34,43 +43,58 @@ export const MenuItemText = styled.Text`
     color: ${color.Branco};
     font-size: 16px;
 `;
+export const Form = styled.View`
+    height:70%;
+    /* justify-content: space-evenly; */
+`;
+
+export const InputArea = styled.View`
+    padding: 20px;
+`;
+
+export const InputContainer = styled.View`
+    padding: 10px;
+`;
+
 export const Input = styled.TextInput`
-    width: 350px;
     height: 48px;
-    margin-left: 20px;
     margin-top: -10px;
-    margin-right: 19.43px;
-    margin-bottom: 41px;    
+    /* margin-bottom: 41px;     */
     border-radius: 8px;
+    align-self: stretch;
     border: 1px solid ${color.Azul};
     padding: 0px 16px 0px 16px;
+    font-family: ${fonts.Medium};
 `;
 
 export const InputLabel = styled.Text`
     width: 60px;
     height: 20px;
+    left: -20px;
     background-color: ${color.Branco};
     text-align: center;
     margin-left: 40px;
     z-index: 1;
+    color: ${color.Azul};
+    font-family: ${fonts.Medium};
 `;
 
 export const ActionButton = styled.TouchableHighlight`
     width: 153px;
     height: 56px;
-    margin-left: 120px;
-    margin-top: 10px;
-    margin-right: 100px;
+    /* margin-left: 120px; */
+    /* margin-top: 10px; */
+    /* margin-right: 100px; */
     background-color: ${color.Azul};
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
-    box-shadow: 0px 2px 2px ${color.Branco}
-    
+    align-self: center;
+    border-radius: 28px;
+    box-shadow: 0px 2px 2px ${color.Branco};
 `;
 
 export const ActionButtonText = styled.Text`
-    color: #FFF;
+    color: ${color.Branco};
     font-size: 16px;
 `;
 
@@ -80,7 +104,7 @@ export const LoadingArea = styled.View`
     top:0;
     right:0;
     bottom:0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: ${color.Preto};
     z-index: 1;
     justify-content: center;
     align-items: center;

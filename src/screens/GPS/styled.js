@@ -36,7 +36,6 @@ export const ViewTexto = styled.View`
 
 export const ViewButtom = styled.View`
     height: 20%;
-    
     justify-content:center;
 `
 

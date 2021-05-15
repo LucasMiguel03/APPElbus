@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { 
   Container, 
+  HeaderContainer,
   Header,  
   HeaderTitle, 
   Menu, 
   MenuItem, 
-  MenuItemText, 
+  MenuItemText,
+  Form,
+  InputArea,
+  InputContainer, 
   Input, 
   InputLabel, 
   ActionButton, 
@@ -19,6 +23,7 @@ import { connect } from 'react-redux';
 import useAppBusaquiApi from '../../services/useAppBusaquiApi';
 
 import color from '../../styles/color';
+import fonts from '../../styles/fonts';
 
 
 
@@ -76,73 +81,110 @@ const Page = (props) => {
     return (
       <Container behavior={Platform.OS === 'ios'?'padding':null}>
         <StatusBar barStyle="light-content" />
-            <Header>
-              <HeaderTitle>Bem-vindo ao Busaqui!!!</HeaderTitle>
-            </Header>
-        <Menu>
-            <MenuItem 
-              active={activeMenu == 'signin'} 
-              onPress={()=>setActiveMenu('signin')} 
-              underlayColor="transparent">
 
-              <MenuItemText>Login</MenuItemText>
-            </MenuItem>
-            <MenuItem 
-              active={activeMenu == 'signup'} 
-              onPress={()=>setActiveMenu('signup')} 
-              underlayColor="transparent">
-                
-              <MenuItemText>Cadastrar</MenuItemText>
-            </MenuItem>
-        </Menu>
-        {activeMenu == 'signup' &&
-          <InputLabel>Nome</InputLabel>
-        }
-        {activeMenu == 'signup' &&
-          <Input 
-            editable={!loading} 
-            value={name} 
-            onChangeText={t=>setName(t)} 
-            placeholder="Digite seu nome" 
-            placeholderTextColor = {color.Cinza} />
-        }
-        <InputLabel>E-mail</InputLabel>
-        <Input 
-          editable={!loading} 
-          value={email} 
-          onChangeText={t=>setEmail(t)} 
-          keyboardType="email-address" 
-          autoCapitalize="none" 
-          placeholder="Digite seu e-mail" 
-          placeholderTextColor = {color.Cinza} />
-        
-        <InputLabel>Senha</InputLabel>
-        <Input 
-          editable={!loading} 
-          value={password} 
-          onChangeText={t=>setPassword (t)} 
-          placeholder="Digite sua senha"  
-          placeholderTextColor = {color.Cinza}
-          secureTextEntry={true} 
-          style={{fontFamily: 'teste'}}/>
+        <HeaderContainer>
+
+          <Header>
+            {/* QUEBRA DE LINHA NO TÍTULO \n */}
+            <HeaderTitle>
+              Bem-vindo ao {'\n'}
+              Busaqui!!!
+            </HeaderTitle>
+          </Header>
+
+          <Menu>
+              <MenuItem 
+                active={activeMenu == 'signin'} 
+                onPress={()=>setActiveMenu('signin')} 
+                underlayColor="transparent">
+
+                <MenuItemText>Login</MenuItemText>
+              </MenuItem>
+              <MenuItem 
+                active={activeMenu == 'signup'} 
+                onPress={()=>setActiveMenu('signup')} 
+                underlayColor="transparent">
+                  
+                <MenuItemText>Cadastrar</MenuItemText>
+              </MenuItem>
+          </Menu>
+
+        </HeaderContainer>
+
+        {/* AREA DO FORMULÁRIO: INPUTS + BOTÃO */}
+        <Form>
+
+          {/* AREA DOS INPUTS*/}
+          <InputArea>
+
+            {/* CONTAINER DO INPUT: LABEL + TEXT INPUT*/}
+            <InputContainer>
+
+              {activeMenu == 'signup' &&
+                <InputLabel>Nome</InputLabel>
+              }
+              {activeMenu == 'signup' &&
+                <Input 
+                  editable={!loading} 
+                  value={name} 
+                  onChangeText={t=>setName(t)} 
+                  placeholder="Digite seu nome" 
+                  placeholderTextColor = {color.Cinza} />
+              }
+
+            </InputContainer>
+
+            {/* CONTAINER DO INPUT: LABEL + TEXT INPUT*/}
+            <InputContainer>
+
+              <InputLabel>E-mail</InputLabel>
+              <Input 
+                editable={!loading} 
+                value={email} 
+                onChangeText={t=>setEmail(t)} 
+                keyboardType="email-address" 
+                autoCapitalize="none" 
+                placeholder="Digite seu e-mail" 
+                placeholderTextColor = {color.Cinza} />
+
+            </InputContainer>
+
+            {/* CONTAINER DO INPUT: LABEL + TEXT INPUT*/}
+            <InputContainer>
+
+              <InputLabel>Senha</InputLabel>
+              <Input 
+                editable={!loading} 
+                value={password} 
+                onChangeText={t=>setPassword (t)} 
+                placeholder="Digite sua senha"  
+                placeholderTextColor = {color.Cinza}
+                secureTextEntry={true}
+                style={{fontFamily: fonts.Medium}}/>
+
+            </InputContainer>
+          </InputArea>
+            
+          {activeMenu == 'signin' &&
+            <ActionButton disabled={loading} onPress={handleSignIn}>
+              <ActionButtonText>Login</ActionButtonText>
+            </ActionButton>
+          }
+          {activeMenu == 'signup' &&
+            <ActionButton disabled={loading} onPress={handleSignUp}>
+              <ActionButtonText>Cadastrar </ActionButtonText>
+            </ActionButton>
+          }
+
           
-        {activeMenu == 'signin' &&
-          <ActionButton disabled={loading} onPress={handleSignIn}>
-            <ActionButtonText>Login</ActionButtonText>
-          </ActionButton>
-        }
-        {activeMenu == 'signup' &&
-          <ActionButton disabled={loading} onPress={handleSignUp}>
-            <ActionButtonText>Cadastrar </ActionButtonText>
-          </ActionButton>
-        }
+          {loading &&
+            <LoadingArea>
+              <ActivityIndicator size="large" color= {color.Branco} />
+            </LoadingArea>
+          }
 
-        
-        {loading &&
-          <LoadingArea>
-            <ActivityIndicator size="large" color= {color.Branco} />
-          </LoadingArea>
-        }
+        </Form>
+
       </Container>
     ); 
   }
