@@ -1,4 +1,6 @@
 import styled from 'styled-components/native';
+import color from '../../styles/color'
+import font from '../../styles/fonts'
 
  /* --------- Estilização e criação de components (tela do Login Inical)--------*/
 
@@ -11,10 +13,10 @@ import styled from 'styled-components/native';
   `;
        /* Estilização da imagem da primeira tela de login */
   export const ImagePontoGraal = styled.Image`
-     flex:1;
+     flex: 1;
      display:flex;
      width:100%;
-     background-color:#dad9d9;
+     background-color:${color.Branco};
      opacity:0.737;
   `;
        /* Estilização do container da página */
@@ -33,7 +35,7 @@ import styled from 'styled-components/native';
   `;
       /* Estilização do container do logo */
   export const ViewStyleLogo= styled.View`
-     margin-top:47px;
+     margin-top:12%;
   `; 
       /* Estilização do Logo Busaqui */
   export const LogoBusaqui = styled.Image`
@@ -50,11 +52,11 @@ import styled from 'styled-components/native';
   `;
         /* Estilização do título */
   export const Title = styled.Text`
-     font-family:Montserrat-Medium;
+     font-family:${font.Medium};
      font-size:42px;
      font-weight:normal;
-     color:#ffffff;
-     text-shadow: 1px 1px 1px #777;
+     color:${color.Branco};
+     text-shadow: 1px 1px 1px ${color.CinzaEscuro};
   `;
         /* Estilização do container do subtítulo */
   export const ViewStyleSubtitle = styled.View`
@@ -69,14 +71,14 @@ import styled from 'styled-components/native';
      font-family:Montserrat-Medium;
      font-weight:normal;
      font-size:13px;
-     color:#ffffff; 
-     text-shadow: 1px 1px 1px #777;
+     color:${color.Branco}; 
+     text-shadow: 1px 1px 1px ${color.Cinza};
   `;
        /*Estilização do botão de Entrar em Login */
   export const ButtomSubscribe = styled.TouchableHighlight`
      width: 169px;
      height: 56px;
-     border: 2px solid #FFFFFF;
+     border: 2px solid ${color.Branco};
      border-radius: 8px;
      justify-content:center; 
      align-items: center; 
@@ -85,9 +87,9 @@ import styled from 'styled-components/native';
    `;
        /*Estilização do texto do botão de Entrar em Login */
   export const ButtomSubscribeText = styled.Text`
-     color: #FFF;
+     color: ${color.Branco};
      font-size: 15px;
-     font-family:Montserrat-Medium;
+     font-family:${font.Medium};
   `;
        /*Estilização do botão de cadastrar Login */
   export const ButtomSignIn = styled.TouchableOpacity`
@@ -96,12 +98,12 @@ import styled from 'styled-components/native';
      margin-top:40px;
      text-align:center;
      justify-content:center;
-     background-color:#0000;
+     background-color:${color.Transparente};
   `;
        /*Estilização do texto do botão de cadastrar Login */
   export const ButtomSignInText = styled.Text`
      font-size:14px;
-     color:#ffffff;
+     color:${color.Branco};
      font-family:Montserrat-normal;
      font-weight:normal;  
   `;
