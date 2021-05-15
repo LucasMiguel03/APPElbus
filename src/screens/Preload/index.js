@@ -12,8 +12,6 @@ import {
   Title, 
   ViewStyleSubtitle,
   Subtitle,
-  ButtomSignIn,
-  ButtomSignInText,
   ButtomSubscribe,
   ButtomSubscribeText
 } from './styled';
@@ -76,13 +74,6 @@ const Preload = (props) => {
                         {/* Texto do botão de entrar */}
                         <ButtomSubscribeText>Criar sua conta</ButtomSubscribeText>
                     </ButtomSubscribe>
-                        {/* Container do botão de cadastrar */}
-                        <ButtomSignIn
-                         >
-                        {/* Texto do botão de cadastrar */}
-                            <ButtomSignInText>Já tem conta?Entrar agora</ButtomSignInText>
-                        </ButtomSignIn>
-                    
             </ViewStylePage>
         </ViewInitialLogin>
     </ScreenInitialLogin>   
