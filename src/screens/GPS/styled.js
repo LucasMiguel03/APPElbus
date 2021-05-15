@@ -9,7 +9,7 @@ import fonts from '../../styles/fonts';
 //Container da pagina Inteira - SafeAreaView
 export const Container = styled.SafeAreaView`
     background-color: ${color.Branco};
-    flex:1;
+    height: 100%;
     justify-content:space-evenly;
 `;
 
@@ -23,19 +23,19 @@ export const GPSImage = styled.Image`
 `;
 
 export const ViewImage = styled.View`
-    flex:4;
+    height: 50%;
     justify-content:center;
     
 `;
 
 export const ViewTexto = styled.View`
-    flex:3;
+    height: 30%;
     justify-content:space-evenly;
     
 `;
 
 export const ViewButtom = styled.View`
-    flex:2;
+    height: 20%;
     
     justify-content:center;
 `
@@ -62,11 +62,11 @@ export const TextoPequenoGPS = styled.Text`
     color: ${color.Cinza}
 `;
 
-//Botão da tela de GPS
+//Botão da tela de GPS - FUTURO COMPONENTE
 export const ButtomGPS = styled.TouchableOpacity`
     width: 150px;
     height: 56px;
-    border-radius: 8px;
+    border-radius: 28px;
     background-color: ${color.Azul};
     align-items: center;
     justify-content: center;

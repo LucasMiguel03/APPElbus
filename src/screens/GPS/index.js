@@ -25,6 +25,8 @@ import {View} from 'react-native';
           </TextoPequenoGPS>
         </ViewTexto>
         <ViewButtom>
+
+        {/* FUTURO COMPONENTE */}
           <ButtomGPS
           onpress={()=>{}}>
             <TextoButtom>
