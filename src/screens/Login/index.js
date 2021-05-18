@@ -82,6 +82,7 @@ const Page = (props) => {
       <Container behavior={Platform.OS === 'ios'?'padding':null}>
         <StatusBar barStyle="light-content" />
 
+        {/* CONTAINER DE TODOS O CABEÇALHO: TÍTULO + MENU */}
         <HeaderContainer>
 
           <Header>
@@ -159,8 +160,7 @@ const Page = (props) => {
                 onChangeText={t=>setPassword (t)} 
                 placeholder="Digite sua senha"  
                 placeholderTextColor = {color.Cinza}
-                secureTextEntry={true}
-                style={{fontFamily: fonts.Medium}}/>
+                secureTextEntry={true} />
 
             </InputContainer>
           </InputArea>
