@@ -71,8 +71,8 @@ export const Subtitle = styled.Text`
 `;
        /*Estilização do botão de Entrar em Login */
 export const ButtomSubscribe = styled.TouchableHighlight`
-   width: 47%;
-   height: 9%;
+   width: 169px;
+   height: 56px;
    border: 2px solid ${color.Branco};
    border-radius: 8px;
    justify-content:center; 
