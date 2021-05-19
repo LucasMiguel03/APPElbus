@@ -5,7 +5,8 @@ import Geolocation from '@react-native-community/geolocation';
 import Geocoder from 'react-native-geocoding';
 import { MapsAPI } from '../../services/config';
 import {
-    Container
+    Container,
+    Header
 } from './styled';
 
 const Page = () => {
@@ -39,6 +40,9 @@ const Page = () => {
 
     return (
         <Container>
+            <Header>
+
+            </Header>
             <StatusBar barStyle="dark-content"/>
             <MapView 
                 ref={map}
