@@ -160,7 +160,8 @@ const Page = (props) => {
                 onChangeText={t=>setPassword (t)} 
                 placeholder="Digite sua senha"  
                 placeholderTextColor = {color.Cinza}
-                secureTextEntry={true} />
+                secureTextEntry={true}
+                style={{fontFamily: fonts.Medium}}/>
 
             </InputContainer>
           </InputArea>
