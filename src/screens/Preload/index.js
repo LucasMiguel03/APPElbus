@@ -3,8 +3,6 @@ import { StackActions, NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
 import { 
   ScreenInitialLogin,
-  ImagePontoGraal,
-  ViewInitialLogin,
   ViewStylePage,
   ViewStyleLogo,
   LogoBusaqui,
@@ -40,6 +38,19 @@ const Preload = (props) => {
             }));
         }
     }
+
+    function HandleTextButton () {
+          if(!props.token){
+            return(
+                <ButtomSubscribeText>Criar sua conta</ButtomSubscribeText>
+            );
+        }
+        else{
+            return(
+                <ButtomSubscribeText>Entrar agora</ButtomSubscribeText>
+            );
+        }
+    }
     
     return (
     <ScreenInitialLogin> 
@@ -69,8 +80,10 @@ const Preload = (props) => {
                     <ButtomSubscribe
                         underlayColor={'#fff4'}
                         onPress={handleSignUp} activeOpacity={0.4}>
-                        {/* Texto do botão de entrar */}
-                         <ButtomSubscribeText>Criar sua conta</ButtomSubscribeText>
+
+                        {/* Texto do botão de entrar/criar sua conta */}
+                        <HandleTextButton/>
+                         
                     </ButtomSubscribe>
             </ViewStylePage>
         </Image> 

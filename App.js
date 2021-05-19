@@ -14,4 +14,4 @@ export default () => (
       <MainStack /> 
     </PersistGate>{/*Fim PersistGate */}
   </Provider>/*Fim Provider*/
-)/*Fim Export default*/
+);/*Fim Export default*/
