@@ -17,7 +17,7 @@ import {
   LoadingArea  
 } from './styled';
 
-import { StatusBar, Platform,Text, ActivityIndicator } from 'react-native';
+import { StatusBar, Platform, ActivityIndicator } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
 import useAppBusaquiApi from '../../services/useAppBusaquiApi';
@@ -49,7 +49,7 @@ const Page = (props) => {
           props.navigation.dispatch(StackActions.reset({
             index:0,
             actions:[
-                NavigationActions.navigate({routeName:'HomeStack'})
+                NavigationActions.navigate({routeName:'HomeDrawer'})
             ]
         }));
         }
@@ -70,7 +70,7 @@ const Page = (props) => {
             props.navigation.dispatch(StackActions.reset({
               index:0,
               actions:[
-                  NavigationActions.navigate({routeName:'HomeStack'})
+                  NavigationActions.navigate({routeName:'HomeDrawer'})
               ]
           })); 
           }

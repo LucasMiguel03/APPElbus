@@ -13,7 +13,8 @@ import {
   ViewStyleSubtitle,
   Subtitle,
   ButtomSubscribe,
-  ButtomSubscribeText
+  ButtomSubscribeText,
+  Image
 } from './styled';
 
 const Preload = (props) => {
@@ -34,19 +35,16 @@ const Preload = (props) => {
             props.navigation.dispatch(StackActions.reset({
                 index:0,
                 actions:[
-                    NavigationActions.navigate({routeName:'Login'})
+                    NavigationActions.navigate({routeName:'HomeDrawer'})
                 ]
             }));
         }
     }
     
     return (
-
     <ScreenInitialLogin> 
-                {/* Imagem da primeira tela de login */}
-      <ImagePontoGraal source={require('../../assets/Images/ImagemGraal.png')} resizeMode="cover"/>    
-        {/* Container da página */}   
-        <ViewInitialLogin>
+                {/* Imagem da primeira tela de login e container */}
+      <Image  source={require('../../assets/Images/ImagemGraal.png')}>  
             {/* Container do conteúdo */}
             <ViewStylePage> 
             {/* Container do logo Busaqui */}
@@ -75,7 +73,7 @@ const Preload = (props) => {
                         <ButtomSubscribeText>Criar sua conta</ButtomSubscribeText>
                     </ButtomSubscribe>
             </ViewStylePage>
-        </ViewInitialLogin>
+        </Image> 
     </ScreenInitialLogin>   
     );
 }

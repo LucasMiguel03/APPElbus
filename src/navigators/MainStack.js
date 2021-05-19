@@ -5,13 +5,13 @@ import { createStackNavigator } from 'react-navigation-stack';
 //ÁREA DE IMPORTAÇÀO DAS TELAS
 import Preload from '../screens/Preload';
 import Login from '../screens/Login';
-//import HomeStack from './HomeStack';
+import HomeDrawer from './HomeDrawer';
 
 //ÁREA DE SEQUÊNCIA DE "CHAMADA" DAS TELAS
 export default createAppContainer(createStackNavigator({
     Preload,
     Login,
-    //HomeStack
+    HomeDrawer
 },{
     initialRouteName:'Preload',
     defaultNavigationOptions:{

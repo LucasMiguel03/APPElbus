@@ -1,3 +1,4 @@
+import { min } from 'react-native-reanimated';
 import styled from 'styled-components/native';
 import color from '../../styles/color'
 import font from '../../styles/fonts'
@@ -11,19 +12,14 @@ export const ScreenInitialLogin = styled.SafeAreaView`
    align-items:center;
    display:flex;
 `;
-       /* Estilização da imagem da primeira tela de login */
-export const ImagePontoGraal = styled.Image`
-   flex:1;
-   display:flex;
-   width:100%;
-   background-color:${color.Branco};
-   opacity:0.797;
+    /* Estilização da imagem */
+export const Image = styled.ImageBackground`
+   width: 100%;
+   height: 100%;
 `;
        /* Estilização do container da página */
 export const ViewInitialLogin = styled.View`
-   width:100%;
-   height:100%;
-   margin-top:-200%;
+   
 `;
        /* Estilização do container do conteúdo */
 export const ViewStylePage = styled.View`
@@ -90,4 +86,5 @@ export const ButtomSubscribeText = styled.Text`
    font-size: 15px;
    font-family:${font.Medium};
 `;
+
  
