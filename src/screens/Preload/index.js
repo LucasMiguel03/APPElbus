@@ -70,7 +70,7 @@ const Preload = (props) => {
                         underlayColor={'#fff4'}
                         onPress={handleSignUp} activeOpacity={0.4}>
                         {/* Texto do botão de entrar */}
-                        <ButtomSubscribeText>Criar sua conta</ButtomSubscribeText>
+                         <ButtomSubscribeText>Criar sua conta</ButtomSubscribeText>
                     </ButtomSubscribe>
             </ViewStylePage>
         </Image> 

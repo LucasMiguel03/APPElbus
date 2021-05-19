@@ -14,8 +14,8 @@ const Page = () => {
     
     const [maploc, setMapLoc] = useState({
         center:{
-            latitude:37.78825,
-            longitude:-122.4324
+            latitude:-22.7870,
+            longitude:-45.1778
         },
         zoom:16,
         pitch:0,
