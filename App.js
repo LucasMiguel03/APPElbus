@@ -12,6 +12,6 @@ export default () => (
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <MainStack /> 
-    </PersistGate>{/*Fim PersistGate */}
+    </PersistGate>{/*Fim PersistGate1 */}
   </Provider>/*Fim Provider*/
 );/*Fim Export default*/
