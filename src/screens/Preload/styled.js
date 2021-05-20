@@ -16,6 +16,7 @@ export const ScreenInitialLogin = styled.SafeAreaView`
 export const Image = styled.ImageBackground`
    width: 100%;
    height: 100%;
+   opacity:0.9;
 `;
        /* Estilização do container da página */
 export const ViewInitialLogin = styled.View`

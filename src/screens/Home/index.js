@@ -6,8 +6,11 @@ import Geocoder from 'react-native-geocoding';
 import { MapsAPI } from '../../services/config';
 import {
     Container,
-    Header
-} from './styled';
+    Header,
+    HeaderContent,
+    MenuIcon,
+    InputSearch
+    } from './styled';
 
 const Page = () => {
 
@@ -18,7 +21,7 @@ const Page = () => {
             latitude:-22.4689647,
             longitude:-44.4554897
         },
-        zoom:13.9,
+        zoom:16,
         pitch:0,
         altitude:0,
         heading:0
@@ -40,16 +43,25 @@ const Page = () => {
 
     return (
         <Container>
-            <Header>
+            <StatusBar barStyle="light-content"/>
+            
+                <Header>
+                    <HeaderContent>
+                        <MenuIcon source={require("../../assets/Images/Icons/IconMenu.png")}>
 
-            </Header>
-            <StatusBar barStyle="dark-content"/>
-            <MapView 
-                ref={map}
-                style={{flex:1}}
-                provider="google"
-                camera={maploc}
-            ></MapView>
+                        </MenuIcon>
+                        <InputSearch/>
+                    </HeaderContent>
+                </Header>
+
+                
+            {/* <StatusBar barStyle="light-content"/> */}
+                    <MapView 
+                        ref={map}
+                        style={{flex:1}}
+                        provider="google"
+                        camera={maploc}
+                    ></MapView>   
         </Container>
     );
 }
