@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { 
   ScreenInitialLogin,
   ViewStylePage,
-  ViewStyleLogo,
   LogoBusaqui,
+  ContainerTitle,
   ViewStyleTitle,
   Title, 
   ViewStyleSubtitle,
@@ -39,16 +39,18 @@ const Preload = (props) => {
         }
     }
 
-    function HandleTextButton () {
-          if(!props.token){
+    //VERIFICA SE O USUÁRIO TEM UM TOKEN, SE SIM PÕE O TEXTO COMO "ENTRAR AGORA", SE NÃO PÕE O TEXTO COMO "CRIAR SUA CONTA"
+    function HandleButtonText () {
+        if (!props.token) {
             return(
                 <ButtomSubscribeText>Criar sua conta</ButtomSubscribeText>
-            );
+            )
         }
-        else{
+
+        else {
             return(
                 <ButtomSubscribeText>Entrar agora</ButtomSubscribeText>
-            );
+            )
         }
     }
     
@@ -59,31 +61,42 @@ const Preload = (props) => {
             {/* Container do conteúdo */}
             <ViewStylePage> 
             {/* Container do logo Busaqui */}
-                <ViewStyleLogo>
+
                 {/* Logo transparente do Busaqui inserido na parte superior centralizada em linha */}
-                    <LogoBusaqui source={require('../../assets/Images/Icons/Busaqui.png')}/>
-                </ViewStyleLogo>
-                {/* container do titulo */}
-                <ViewStyleTitle>
-                {/* Título da screen */}
-                    <Title>Saiba onde</Title>
-                    <Title>seu ônibus</Title> 
-                    <Title>está agora!</Title>
-                </ViewStyleTitle>
-                    {/* Container do subtítulo */}
-                <ViewStyleSubtitle>
-                    {/* Subtítulo centralizado em linha abaixo do título */}
-                    <Subtitle>Assistente de mobilidade urbana, que </Subtitle>
-                    <Subtitle>mostra a localização em tempo real dos </Subtitle>
-                    <Subtitle>ônibus de sua cidade.</Subtitle>
-                </ViewStyleSubtitle>
+                <LogoBusaqui source={require('../../assets/Images/Icons/Busaqui.png')}/>
+
+
+                {/* CONTAINER DO TÍTULO + SUBTÍTULO */}
+                <ContainerTitle>
+                
+                    <ViewStyleTitle>
+                    {/* Título da screen */}
+                        <Title>
+                            Saiba onde {'\n'}
+                            seu ônibus {'\n'}
+                            está agora!
+                        </Title>
+
+                    </ViewStyleTitle>
+                        {/* Container do subtítulo */}
+                    <ViewStyleSubtitle>
+                        {/* Subtítulo centralizado em linha abaixo do título */}
+                        <Subtitle>
+                            Assistente de mobilidade urbana, que {'\n'}
+                            mostra a localização em tempo real dos {'\n'}
+                            ônibus de sua cidade.
+                        </Subtitle>
+                    </ViewStyleSubtitle>
+
+                </ContainerTitle>
+
                     <ButtomSubscribe
                         underlayColor={'#fff4'}
                         onPress={handleSignUp} activeOpacity={0.4}>
 
-                        {/* Texto do botão de entrar/criar sua conta */}
-                        <HandleTextButton/>
-                         
+                        {/* Texto do botão de entrar */}
+                        <HandleButtonText/>
+
                     </ButtomSubscribe>
             </ViewStylePage>
         </Image> 
