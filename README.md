@@ -2,7 +2,6 @@ O arquivo local.properties foi criado por que para versões no mac, precisa ter 
 para indicar onde está localizado o jdk do java. By Matheus.
 
 ***** INTRUÇÕES PARA RODAR O PROJETO *****
-
 - Estou fazendo anotações e logo colocarei aqui . By Matheus.
 
 ***** INTRUÇÕES DO GIT *****
