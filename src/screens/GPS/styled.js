@@ -1,7 +1,6 @@
 import styled from 'styled-components/native';
 import color from '../../styles/color';
-import fonts from '../../styles/fonts';
-
+import fonts, { assets } from '../../../react-native.config';
 ////////////////
 //TELA DE GPS//
 //////////////
@@ -44,7 +43,7 @@ export const TextoGrandeGPS = styled.Text`
     font-size: 29px;
     line-height: 32px;
     text-align: center;
-    font-family: ${fonts.SemiBold};
+    font-family: 'Montserrat-SemiBold';
     color: ${color.CinzaEscuro};
     width: 321.62px;
     align-self:center;
@@ -56,7 +55,7 @@ export const TextoPequenoGPS = styled.Text`
     text-align: center;
     line-height: 20px;
     width: 305px;
-    font-family: ${fonts.Medium};
+    font-family: 'Montserrat-Medium';
     align-self:center;
     color: ${color.Cinza}
 `;
@@ -76,5 +75,5 @@ export const ButtomGPS = styled.TouchableOpacity`
 export const TextoButtom = styled.Text`
     color: ${color.Branco};
     font-size: 18px;
-    font-family: ${fonts.SemiBold};
+    font-family: 'Montserrat-SemiBold';
 `;

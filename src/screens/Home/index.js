@@ -15,24 +15,45 @@ const Page = () => {
     
     const [maploc, setMapLoc] = useState({
         center:{
-            latitude:-22.4689647,
-            longitude:-44.4554897
+            latitude:37.78825,
+            longitude:-122.4324
         },
-        zoom:13.9,
+        zoom:16,
         pitch:0,
         altitude:0,
         heading:0
 
     });
+    const [fromLoc, setFromLoc] = useState({});
+    const [toLoc, setToLoc] = useState({});
 
     useEffect(()=>{
         Geocoder.init(MapsAPI, {language:'pt-br'});
         getMyCurrentPosition();
+
     }, []);
 
     const getMyCurrentPosition = () => {
-        Geolocation.getCurrentPosition((info)=>{
-            console.log("COORDENADAS: ", info.coords);
+        Geolocation.getCurrentPosition(async (info)=>{
+            const geo = await Geocoder.from(info.coords.latitude, info.coords.longitude);
+
+            if(geo.results.length > 0){
+                const loc = {
+                    name:geo.results[0].formatted_address,
+                    center:{
+                        latitude:info.coords.latitude,
+                        longitude:info.coords.longitude
+                    },
+                    zoom:16,
+                    pitch:0,
+                    altitude:0,
+                    heading:0
+                };
+                setMapLoc(loc);
+                setFromLoc(loc);
+            }
+            console.log(geo.results[0]);    
+
         },(error)=>{
 
         });
@@ -50,6 +71,7 @@ const Page = () => {
                 provider="google"
                 camera={maploc}
             ></MapView>
+            
         </Container>
     );
 }

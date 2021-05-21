@@ -23,7 +23,6 @@ import { connect } from 'react-redux';
 import useAppBusaquiApi from '../../services/useAppBusaquiApi';
 
 import color from '../../styles/color';
-import fonts from '../../styles/fonts';
 
 
 
@@ -161,7 +160,7 @@ const Page = (props) => {
                 placeholder="Digite sua senha"  
                 placeholderTextColor = {color.Cinza}
                 secureTextEntry={true}
-                style={{fontFamily: fonts.Medium}}/>
+                style={{fontFamily: 'Montserrat-Medium'}}/>
 
             </InputContainer>
           </InputArea>

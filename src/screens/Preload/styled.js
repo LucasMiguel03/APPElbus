@@ -1,12 +1,12 @@
 import { min } from 'react-native-reanimated';
 import styled from 'styled-components/native';
-import color from '../../styles/color'
-import font from '../../styles/fonts'
+import color from '../../styles/color';
+import fonts, { assets } from '../../../react-native.config';
 
  /* --------- Estilização e criação de components (tela do Login Inical)--------*/
 
      /* Estilização do Container */
-export const ScreenInitialLogin = styled.SafeAreaView`
+export const ScreenInitialLogin = styled.KeyboardAvoidingView`
    flex:1;
    justify-content:center;
    align-items:center;
@@ -47,7 +47,7 @@ export const ViewStyleTitle = styled.View`
 `;
         /* Estilização do título */
 export const Title = styled.Text`
-   font-family:${font.Medium};
+   font-family: 'Montserrat-Medium';
    font-size:42px;
    font-weight:normal;
    color:${color.Branco};
@@ -63,7 +63,7 @@ export const ViewStyleSubtitle = styled.View`
 `;
         /* Estilização do subtítulo */
 export const Subtitle = styled.Text`
-   font-family:${font.Medium};
+   font-family: 'Montserrat-Medium';
    font-weight:normal;
    font-size:13px;
    color:${color.Branco}; 
@@ -84,7 +84,7 @@ export const ButtomSubscribe = styled.TouchableHighlight`
 export const ButtomSubscribeText = styled.Text`
    color: ${color.Branco};
    font-size: 15px;
-   font-family:${font.Medium};
+   font-family: 'Montserrat-Medium';
 `;
 
  
