@@ -6,8 +6,11 @@ import Geocoder from 'react-native-geocoding';
 import { MapsAPI } from '../../services/config';
 import {
     Container,
-    Header
-} from './styled';
+    Header,
+    HeaderContent,
+    MenuIcon,
+    InputSearch
+    } from './styled';
 
 const Page = () => {
 

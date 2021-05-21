@@ -16,50 +16,46 @@ export const ScreenInitialLogin = styled.KeyboardAvoidingView`
 export const Image = styled.ImageBackground`
    width: 100%;
    height: 100%;
+   opacity:0.9;
 `;
-       /* Estilização do container da página */
-export const ViewInitialLogin = styled.View`
-   
-`;
-       /* Estilização do container do conteúdo */
+   /* Estilização do container do conteúdo */
 export const ViewStylePage = styled.View`
    flex-direction:column;
-   justify-content:center;
+   justify-content:space-evenly;
    align-items:center;
    display:flex;
+   height: 100%;
 `;
-      /* Estilização do container do logo */
-export const ViewStyleLogo= styled.View`
-   margin-top:12%;
-`; 
-      /* Estilização do Logo Busaqui */
+   /* Estilização do Logo Busaqui */
 export const LogoBusaqui = styled.Image`
    width:157px;
-   height:51.02px;
+   height:51px;
 `;
-        /* Estilização do container do título */
+
+   /* Estilização do Container dos Títulos */
+export const ContainerTitle = styled.View`
+   height: 50%;
+`;
+   /* Estilização do container do título */
 export const ViewStyleTitle = styled.View`
-   margin-top:19.3%;
-   width:65.5%;
-   height:16%;
+   height:70%;
    justify-content:center;
    align-items:center;
-`;
-        /* Estilização do título */
+`;                         
+   /* Estilização do título */
 export const Title = styled.Text`
    font-family: 'Montserrat-Medium';
    font-size:42px;
    font-weight:normal;
    color:${color.Branco};
    text-shadow: 1px 1px 1px ${color.CinzaEscuro};
+   text-align: center;
 `;
-        /* Estilização do container do subtítulo */
+   /* Estilização do container do subtítulo */
 export const ViewStyleSubtitle = styled.View`
-   width:72.8%; 
-   height:14%;
+   height:30%;
    justify-content:center;
    align-items:center;
-   margin-top:9%;
 `;
         /* Estilização do subtítulo */
 export const Subtitle = styled.Text`
@@ -68,6 +64,7 @@ export const Subtitle = styled.Text`
    font-size:13px;
    color:${color.Branco}; 
    text-shadow: 1px 1px 1px ${color.Cinza};
+   text-align: center;
 `;
        /*Estilização do botão de Entrar em Login */
 export const ButtomSubscribe = styled.TouchableHighlight`
@@ -77,8 +74,7 @@ export const ButtomSubscribe = styled.TouchableHighlight`
    border-radius: 8px;
    justify-content:center; 
    align-items: center; 
-   padding: 14px 18px;
-   margin-top:18%;
+   background-color: ${color.CinzaSemiTransparente};
 `;
        /*Estilização do texto do botão de Entrar em Login */
 export const ButtomSubscribeText = styled.Text`
