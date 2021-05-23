@@ -22,7 +22,6 @@ import { StackActions, NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
 import useAppBusaquiApi from '../../services/useAppBusaquiApi';
 import color from '../../styles/color';
-import fonts from '../../styles/fonts';
 
 
 
@@ -160,7 +159,11 @@ const Page = (props) => {
                 placeholder="Digite sua senha"  
                 placeholderTextColor = {color.Cinza}
                 secureTextEntry={true}
+<<<<<<< HEAD
                 style={{fontFamily:fonts.Medium}}/>
+=======
+                style={{fontFamily: 'Montserrat-Medium'}}/>
+>>>>>>> f7ccac2f03c0b57491064d470439dcf63fff4444
 
             </InputContainer>
           </InputArea>

@@ -1,12 +1,12 @@
 import { min } from 'react-native-reanimated';
 import styled from 'styled-components/native';
-import color from '../../styles/color'
-import font from '../../styles/fonts'
+import color from '../../styles/color';
+import fonts, { assets } from '../../../react-native.config';
 
  /* --------- Estilização e criação de components (tela do Login Inical)--------*/
 
      /* Estilização do Container */
-export const ScreenInitialLogin = styled.SafeAreaView`
+export const ScreenInitialLogin = styled.KeyboardAvoidingView`
    flex:1;
    justify-content:center;
    align-items:center;
@@ -44,8 +44,9 @@ export const ViewStyleTitle = styled.View`
 `;                         
    /* Estilização do título */
 export const Title = styled.Text`
-   font-family:${font.SemiBold};
-   font-size:44px;
+   font-family: 'Montserrat-Medium';
+   font-size:42px;
+   font-weight:normal;
    color:${color.Branco};
    text-shadow: 1px 1px 1px ${color.CinzaEscuro};
    text-align: center;
@@ -58,8 +59,9 @@ export const ViewStyleSubtitle = styled.View`
 `;
         /* Estilização do subtítulo */
 export const Subtitle = styled.Text`
-   font-family: ${font.Regular};
-   font-size:14px;
+   font-family: 'Montserrat-Medium';
+   font-weight:normal;
+   font-size:13px;
    color:${color.Branco}; 
    text-shadow: 1px 1px 1px ${color.Cinza};
    text-align: center;
@@ -77,8 +79,8 @@ export const ButtomSubscribe = styled.TouchableHighlight`
        /*Estilização do texto do botão de Entrar em Login */
 export const ButtomSubscribeText = styled.Text`
    color: ${color.Branco};
-   font-size: 18px;
-   font-family:${font.SemiBold};
+   font-size: 15px;
+   font-family: 'Montserrat-Medium';
 `;
 
  

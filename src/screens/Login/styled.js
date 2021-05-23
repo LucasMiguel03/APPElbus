@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import color from '../../styles/color';
-import fonts from '../../styles/fonts';
+import fonts, { assets } from '../../../react-native.config';
 
 export const Container = styled.KeyboardAvoidingView`
     flex: 1;
@@ -24,7 +24,7 @@ export const HeaderTitle = styled.Text`
     font-size: 27px;
     /* padding-left: 20px; */
     left: 20px;
-    font-family: ${fonts.SemiBold};
+    font-family: 'Montserrat-SemiBold';
 `;
 
 export const Menu = styled.View`
@@ -64,7 +64,7 @@ export const Input = styled.TextInput`
     align-self: stretch;
     border: 1px solid ${color.Azul};
     padding: 0px 16px 0px 16px;
-    font-family: ${fonts.Medium};
+    font-family: 'Montserrat-Medium';
 `;
 
 export const InputLabel = styled.Text`
@@ -76,7 +76,7 @@ export const InputLabel = styled.Text`
     margin-left: 40px;
     z-index: 1;
     color: ${color.Azul};
-    font-family: ${fonts.Medium};
+    font-family: 'Montserrat-Medium';
 `;
 
 export const ActionButton = styled.TouchableHighlight`
