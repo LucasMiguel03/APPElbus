@@ -1,14 +1,14 @@
 import styled from 'styled-components/native';
-
+import color from '../../styles/color';
 /*Estilização da Splash azul com logo busaqui (tela1)*/
 export const PageSplash = styled.SafeAreaView`
    flex:1;
-   background-color:${Cor_Primaria};
+   background-color:${color.Azul};
    justify-content:center;
    align-items:center;
 `;
  /*Estilização do Logo Busaqui*/
-export const LogoSplash = styled.Image`
+ export const LogoSplash = styled.Image`
    display:flex;
    width:243px;
    height:78.96px;

@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect  } from 'react';
-import { StatusBar, Text, SafeAreaView } from 'react-native';
+import { StatusBar, Text, SafeAreaView, TouchableHighlight, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import  MapView from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 import Geocoder from 'react-native-geocoding';
@@ -8,9 +8,14 @@ import {
     Container,
     Header,
     HeaderContent,
+    Menu,
     MenuIcon,
-    InputSearch
+    InputSearch,
+    SearchButton,
+    SearchIcon
     } from './styled';
+import color from '../../styles/color';
+import { SearchBar } from 'react-native-screens';
 
 const Page = () => {
 
@@ -39,29 +44,34 @@ const Page = () => {
         },(error)=>{
 
         });
-    }
+    } 
+
+    const [Search,setSearch] = useState('');
 
     return (
         <Container>
-            <StatusBar barStyle="light-content"/>
-            
+            <StatusBar backgroundColor={color.Azul} barStyle="light-content"/>
                 <Header>
                     <HeaderContent>
-                        <MenuIcon source={require("../../assets/Images/Icons/IconMenu.png")}>
-
-                        </MenuIcon>
-                        <InputSearch/>
+                        <Menu onPress={()=>{}}>
+                            <MenuIcon source={require("../../assets/Images/Icons/MenuIcon.png")} resizeMode='contain'/>   
+                        </Menu>
+                            <InputSearch 
+                                value={Search} 
+                                onChangeText={t=>setSearch(t)} 
+                                placeholder="Para onde você vai?" 
+                                placeholderTextColor={color.Cinza}/>
+                                <SearchButton onPress={()=>{}}>
+                                    <SearchIcon source={require("../../assets/Images/Icons/SearchIcon.png")} />
+                                </SearchButton>   
                     </HeaderContent>
-                </Header>
-
-                
-            {/* <StatusBar barStyle="light-content"/> */}
-                    <MapView 
-                        ref={map}
-                        style={{flex:1}}
-                        provider="google"
-                        camera={maploc}
-                    ></MapView>   
+                </Header>        
+                <MapView 
+                    ref={map}
+                    style={{flex:1}}
+                    provider="google"
+                    camera={maploc}
+                ></MapView>   
         </Container>
     );
 }

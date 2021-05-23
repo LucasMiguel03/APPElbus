@@ -21,7 +21,6 @@ import { StatusBar, Platform, ActivityIndicator } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
 import useAppBusaquiApi from '../../services/useAppBusaquiApi';
-
 import color from '../../styles/color';
 import fonts from '../../styles/fonts';
 
@@ -130,7 +129,7 @@ const Page = (props) => {
                   value={name} 
                   onChangeText={t=>setName(t)} 
                   placeholder="Digite seu nome" 
-                  placeholderTextColor = {color.Cinza} />
+                  placeholderTextColor = {color.Cinza}/>
               }
 
             </InputContainer>
@@ -157,11 +156,11 @@ const Page = (props) => {
               <Input 
                 editable={!loading} 
                 value={password} 
-                onChangeText={t=>setPassword (t)} 
+                onChangeText={t=>setPassword(t)} 
                 placeholder="Digite sua senha"  
                 placeholderTextColor = {color.Cinza}
                 secureTextEntry={true}
-                style={{fontFamily: fonts.Medium}}/>
+                style={{fontFamily:fonts.Medium}}/>
 
             </InputContainer>
           </InputArea>
@@ -180,7 +179,7 @@ const Page = (props) => {
           
           {loading &&
             <LoadingArea>
-              <ActivityIndicator size="large" color= {color.Branco} />
+              <ActivityIndicator size="large" color={color.Branco} />
             </LoadingArea>
           }
 
