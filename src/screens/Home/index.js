@@ -51,21 +51,6 @@ const Page = () => {
     return (
         <Container>
             <StatusBar backgroundColor={color.Azul} barStyle="light-content"/>
-                <Header>
-                    <HeaderContent>
-                        <Menu onPress={()=>{}}>
-                            <MenuIcon source={require("../../assets/Images/Icons/MenuIcon.png")} resizeMode='contain'/>   
-                        </Menu>
-                            <InputSearch 
-                                value={Search} 
-                                onChangeText={t=>setSearch(t)} 
-                                placeholder="Para onde você vai?" 
-                                placeholderTextColor={color.Cinza}/>
-                                <SearchButton onPress={()=>{}}>
-                                    <SearchIcon source={require("../../assets/Images/Icons/SearchIcon.png")} />
-                                </SearchButton>   
-                    </HeaderContent>
-                </Header>        
                 <MapView 
                     ref={map}
                     style={{flex:1}}
