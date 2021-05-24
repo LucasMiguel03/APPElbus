@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import color from '../../styles/color';
-import fonts from '../../styles/fonts';
+
 
 ////////////////
 //TELA DE GPS//
