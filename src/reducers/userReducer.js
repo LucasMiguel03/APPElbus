@@ -13,6 +13,5 @@ export default (state = initialState, action) => {
             return {...state, token: action.payload.token};
             break; 
     }
-
     return state;
 }

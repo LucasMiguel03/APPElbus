@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
-import color from '../../styles/color';
+import color from '../../assets/color';
+
 /*Estilização da Splash azul com logo busaqui (tela1)*/
 export const PageSplash = styled.SafeAreaView`
    flex:1;

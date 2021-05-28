@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect  } from 'react';
-import { StatusBar, Text, SafeAreaView, TouchableHighlight, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import  MapView from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 import Geocoder from 'react-native-geocoding';
@@ -14,8 +13,10 @@ import {
     SearchButton,
     SearchIcon
     } from './styled';
-import color from '../../styles/color';
+import color from '../../assets/color';
 import { SearchBar } from 'react-native-screens';
+import {HomeDrawer} from '../../navigators/HomeDrawer'
+import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
 
 const Page = () => {
 
@@ -30,7 +31,6 @@ const Page = () => {
         pitch:0,
         altitude:0,
         heading:0
-
     });
 
     useEffect(()=>{
@@ -50,7 +50,21 @@ const Page = () => {
 
     return (
         <Container>
-            <StatusBar backgroundColor={color.Azul} barStyle="light-content"/>
+                <Header>
+                    <HeaderContent>
+                        <Menu onPress={()=>('HomeDrawer')}>
+                            <MenuIcon source={require("../../assets/Images/Icons/menuIcon.png")} resizeMode='contain'/>   
+                        </Menu>
+                            <InputSearch 
+                                value={Search} 
+                                onChangeText={t=>setSearch(t)} 
+                                placeholder="Para onde você vai?" 
+                                placeholderTextColor={color.Cinza}/>
+                            <SearchButton onPress={()=>{}}>
+                                    <SearchIcon source={require("../../assets/Images/Icons/searchIcon.png")}/>
+                            </SearchButton>   
+                    </HeaderContent>
+                </Header>        
                 <MapView 
                     ref={map}
                     style={{flex:1}}
