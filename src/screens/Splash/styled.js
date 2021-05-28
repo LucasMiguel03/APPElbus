@@ -9,7 +9,7 @@ export const PageSplash = styled.SafeAreaView`
    align-items:center;
 `;
  /*Estilização do Logo Busaqui*/
- export const LogoSplash = styled.Image`
+ export const LogoBusaqui = styled.Image`
    display:flex;
    width:243px;
    height:78.96px;
