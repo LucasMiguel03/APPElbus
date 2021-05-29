@@ -59,7 +59,7 @@ export const ViewStyleSubtitle = styled.View`
 `;
         /* Estilização do subtítulo */
 export const Subtitle = styled.Text`
-   font-family: 'Montserrat-Medium';
+   font-family: 'Montserrat-Bold';
    font-weight:normal;
    font-size:13px;
    color:${color.Branco}; 

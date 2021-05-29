@@ -1,25 +1,29 @@
 import React, { useRef, useState, useEffect  } from 'react';
-import { StatusBar, Text, SafeAreaView } from 'react-native';
+import { StatusBar } from 'react-native';
 import  MapView from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 import Geocoder from 'react-native-geocoding';
+import MapViewDirections from 'react-native-maps-directions';
 import { MapsAPI } from '../../services/config';
-import {
+import color from '../../styles/color';
+import { 
     Container,
-    Header,
-    HeaderContent,
-    MenuIcon,
-    InputSearch
+    IntineraryArea,
+    IntineraryItem,
+    IntineraryLabel,
+    IntineraryPoint,
+    IntineraryTitle,
+    IntineraryValue,
+    IntineraryPlaceHolder
     } from './styled';
 
-const Page = () => {
 
+const Page = (props) => {
     const map = useRef();
-    
     const [maploc, setMapLoc] = useState({
         center:{
-            latitude:37.78825,
-            longitude:-122.4324
+            latitude:-22.7869589,
+            longitude:-45.1800201
         },
         zoom:16,
         pitch:0,
@@ -27,54 +31,29 @@ const Page = () => {
         heading:0
 
     });
-    const [fromLoc, setFromLoc] = useState({});
-    const [toLoc, setToLoc] = useState({});
-
-    useEffect(()=>{
+     useEffect(()=>{
         Geocoder.init(MapsAPI, {language:'pt-br'});
         getMyCurrentPosition();
 
     }, []);
-
     const getMyCurrentPosition = () => {
-        Geolocation.getCurrentPosition(async (info)=>{
-            const geo = await Geocoder.from(info.coords.latitude, info.coords.longitude);
-
-            if(geo.results.length > 0){
-                const loc = {
-                    name:geo.results[0].formatted_address,
-                    center:{
-                        latitude:info.coords.latitude,
-                        longitude:info.coords.longitude
-                    },
-                    zoom:16,
-                    pitch:0,
-                    altitude:0,
-                    heading:0
-                };
-                setMapLoc(loc);
-                setFromLoc(loc);
-            }
-            console.log(geo.results[0]);    
-
-        },(error)=>{
-
-        });
-    }
-
+            Geolocation.getCurrentPosition(async (info)=>{
+                console.log("COORDENADAS: ",info.coords);
+            },(error)=>{
+                
+            });
+        }
     return (
         <Container>
-            <Header>
-
-            </Header>
             <StatusBar barStyle="dark-content"/>
-            <MapView 
+            <MapView
                 ref={map}
                 style={{flex:1}}
                 provider="google"
                 camera={maploc}
-            ></MapView>
+            >
             
+            </MapView>  
         </Container>
     );
 }

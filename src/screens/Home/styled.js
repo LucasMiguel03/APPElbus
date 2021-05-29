@@ -1,38 +1,60 @@
 import styled from 'styled-components/native';
-import color from '../../styles/color'
+import color from '../../styles/color';
 
-export const Container = styled.SafeAreaView`
-    flex:1; 
-    /* background-color:#FF0000; */
-`;
-export const Header = styled.View`
-    background-color:${color.Azul};
-    width:100%;
-    height:72px;
-`;
-export const HeaderContent = styled.View`
-    width:311px;
-    height:41px; 
-    background-color:white;
-    margin-left:31px;
-    margin-top:15px;
-    border-radius:6.62px;
-    flex-direction:row;
-`;
-export const MenuIcon = styled.TouchableOpacity`
-    width:16px;
-    height:14.61px;
-    margin-top:13px;
-    margin-left:11px;
-    background-color: red;
-`;
-export const InputSearch = styled.TextInput`
-    width:225.08px;
-    height:14.89px; 
-    background-color:pink; 
-    margin-top:13px;  
-    margin-left:42px;
-    margin-right:43.92px;
-    margin-bottom:13.11px;
+export const Container = styled.View`
+    flex:1;
+    background-color: #FF0000;
 `;
 
+
+
+
+
+
+
+
+// export const IntineraryArea = styled.View`
+//     position: absolute;
+//     left: 10px;
+//     right: 10px;
+//     top: 50px;
+//     background-color: #FFF;
+//     border-radius: 5px;
+//     box-shadow: 0px 0px 4px #999;
+//     border-color: #EEE;
+//     border-width: 1px;
+// `;
+
+// export const IntineraryItem = styled.TouchableHighlight`
+//     padding: 15px 20px;
+//     border-bottom-color: #EEE;
+//     border-bottom-width: 1px; 
+// `;
+
+// export const IntineraryLabel = styled.View`
+//     flex-direction: row;
+//     align-items: center;
+//     margin-bottom: 10px; 
+// `;
+
+// export const IntineraryPoint = styled.View`
+//     width: 10px;
+//     height: 10px;
+//     border-radius: 5px;
+//     background-color: ${props=>props.color};
+// `;
+
+// export const IntineraryTitle = styled.Text`
+//     margin-left: 10px;
+//     color: #999;
+// `;
+
+// export const IntineraryValue = styled.Text`
+//     color: #000;
+//     font-size: 16px;
+// `;
+// export const IntineraryPlaceHolder = styled.Text`
+//     color: #555;
+//     font-size: 16px;
+//     text-align: center;
+// `;
