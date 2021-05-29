@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
+
+
+import { StatusBar, Platform, ActivityIndicator } from 'react-native';
+import { StackActions, NavigationActions } from 'react-navigation';
+import { connect } from 'react-redux';
+import useAppBusaquiApi from '../../services/useAppBusaquiApi';
+import color from '../../assets/color';
 import { 
   Container, 
   HeaderContainer,
@@ -16,13 +23,6 @@ import {
   ActionButtonText, 
   LoadingArea  
 } from './styled';
-
-import { StatusBar, Platform, ActivityIndicator } from 'react-native';
-import { StackActions, NavigationActions } from 'react-navigation';
-import { connect } from 'react-redux';
-import useAppBusaquiApi from '../../services/useAppBusaquiApi';
-import color from '../../assets/color';
-
 
 const Page = (props) => {
     const  api = useAppBusaquiApi();
