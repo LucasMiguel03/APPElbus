@@ -4,4 +4,4 @@
          android:{}
      }, 
     assets: ['./src/assets/fonts']
-}
+    }

@@ -16,6 +16,10 @@ import {
     IntineraryValue,
     IntineraryPlaceHolder
     } from './styled';
+import color from '../../assets/color';
+import { SearchBar } from 'react-native-screens';
+import {HomeDrawer} from '../../navigators/HomeDrawer'
+import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
 
 
 const Page = (props) => {
@@ -29,12 +33,10 @@ const Page = (props) => {
         pitch:0,
         altitude:0,
         heading:0
-
     });
      useEffect(()=>{
         Geocoder.init(MapsAPI, {language:'pt-br'});
         getMyCurrentPosition();
-
     }, []);
     const getMyCurrentPosition = () => {
             Geolocation.getCurrentPosition(async (info)=>{

@@ -1,7 +1,5 @@
-import { min } from 'react-native-reanimated';
 import styled from 'styled-components/native';
-import color from '../../styles/color';
-import fonts, { assets } from '../../../react-native.config';
+import color from '../../assets/color';
 
  /* --------- Estilização e criação de components (tela do Login Inical)--------*/
 
@@ -16,7 +14,6 @@ export const ScreenInitialLogin = styled.KeyboardAvoidingView`
 export const Image = styled.ImageBackground`
    width: 100%;
    height: 100%;
-   opacity:0.9;
 `;
    /* Estilização do container do conteúdo */
 export const ViewStylePage = styled.View`
@@ -28,13 +25,12 @@ export const ViewStylePage = styled.View`
 `;
    /* Estilização do Logo Busaqui */
 export const LogoBusaqui = styled.Image`
-   width:157px;
-   height:51px;
+   width:189.5px;
+   height:61.9px;
 `;
-
    /* Estilização do Container dos Títulos */
-export const ContainerTitle = styled.View`
-   height: 50%;
+export const ContainerText = styled.View`
+   height:50%;
 `;
    /* Estilização do container do título */
 export const ViewStyleTitle = styled.View`
@@ -44,8 +40,8 @@ export const ViewStyleTitle = styled.View`
 `;                         
    /* Estilização do título */
 export const Title = styled.Text`
-   font-family: 'Montserrat-Medium';
-   font-size:42px;
+   font-family: 'Montserrat-SemiBold';
+   font-size:40px;
    font-weight:normal;
    color:${color.Branco};
    text-shadow: 1px 1px 1px ${color.CinzaEscuro};
@@ -61,7 +57,7 @@ export const ViewStyleSubtitle = styled.View`
 export const Subtitle = styled.Text`
    font-family: 'Montserrat-Bold';
    font-weight:normal;
-   font-size:13px;
+   font-size:15px;
    color:${color.Branco}; 
    text-shadow: 1px 1px 1px ${color.Cinza};
    text-align: center;

@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import color from '../../styles/color';
+import color from '../../assets/color';
 import fonts, { assets } from '../../../react-native.config';
 
 export const Container = styled.KeyboardAvoidingView`
@@ -8,7 +8,6 @@ export const Container = styled.KeyboardAvoidingView`
 `;
 
 export const HeaderContainer = styled.View`
-    /* height: 150px; */
     height:30%;
     background-color: ${color.Azul};
     justify-content: space-between;
@@ -22,7 +21,6 @@ export const Header = styled.SafeAreaView`
 export const HeaderTitle = styled.Text`
     color: ${color.Branco};
     font-size: 27px;
-    /* padding-left: 20px; */
     left: 20px;
     font-family: 'Montserrat-SemiBold';
 `;
@@ -31,7 +29,6 @@ export const Menu = styled.View`
     background-color: ${color.Azul};
     flex-direction: row;
     padding-left: 20px;
-    /* margin-bottom: 100px; */
 `;
 export const MenuItem = styled.TouchableHighlight`
     padding: 20px;
@@ -45,7 +42,6 @@ export const MenuItemText = styled.Text`
 `;
 export const Form = styled.View`
     height:70%;
-    /* justify-content: space-evenly; */
 `;
 
 export const InputArea = styled.View`
@@ -59,7 +55,6 @@ export const InputContainer = styled.View`
 export const Input = styled.TextInput`
     height: 48px;
     margin-top: -10px;
-    /* margin-bottom: 41px;     */
     border-radius: 8px;
     align-self: stretch;
     border: 1px solid ${color.Azul};
@@ -82,9 +77,6 @@ export const InputLabel = styled.Text`
 export const ActionButton = styled.TouchableHighlight`
     width: 153px;
     height: 56px;
-    /* margin-left: 120px; */
-    /* margin-top: 10px; */
-    /* margin-right: 100px; */
     background-color: ${color.Azul};
     justify-content: center;
     align-items: center;
