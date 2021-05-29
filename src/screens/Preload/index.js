@@ -59,7 +59,7 @@ const Preload = (props) => {
     <ScreenInitialLogin> 
         <StatusBar barStyle="light-content"/>
                 {/* Imagem da primeira tela de login e container */}
-        <Image  source={require('../../assets/Images/imagemGraal.png')}>  
+        <Image  source={require('../../assets/Images/ImagemGraal.png')}>  
             {/* Container do conteúdo */}
             <ViewStylePage> 
             {/* Container do logo Busaqui */}

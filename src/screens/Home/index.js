@@ -5,7 +5,7 @@ import Geolocation from '@react-native-community/geolocation';
 import Geocoder from 'react-native-geocoding';
 import MapViewDirections from 'react-native-maps-directions';
 import { MapsAPI } from '../../services/config';
-import color from '../../styles/color';
+import color from '../../assets/color.js';
 import { 
     Container,
     IntineraryArea,
@@ -16,7 +16,6 @@ import {
     IntineraryValue,
     IntineraryPlaceHolder
     } from './styled';
-import color from '../../assets/color';
 import { SearchBar } from 'react-native-screens';
 import {HomeDrawer} from '../../navigators/HomeDrawer'
 import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
