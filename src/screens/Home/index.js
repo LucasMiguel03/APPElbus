@@ -1,76 +1,60 @@
 import React, { useRef, useState, useEffect  } from 'react';
+import { StatusBar } from 'react-native';
 import  MapView from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 import Geocoder from 'react-native-geocoding';
+import MapViewDirections from 'react-native-maps-directions';
 import { MapsAPI } from '../../services/config';
-import {
+import color from '../../assets/color.js';
+import { 
     Container,
-    Header,
-    HeaderContent,
-    Menu,
-    MenuIcon,
-    InputSearch,
-    SearchButton,
-    SearchIcon
+    IntineraryArea,
+    IntineraryItem,
+    IntineraryLabel,
+    IntineraryPoint,
+    IntineraryTitle,
+    IntineraryValue,
+    IntineraryPlaceHolder
     } from './styled';
-import color from '../../assets/color';
 import { SearchBar } from 'react-native-screens';
 import {HomeDrawer} from '../../navigators/HomeDrawer'
 import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
 
-const Page = () => {
 
+const Page = (props) => {
     const map = useRef();
-    
     const [maploc, setMapLoc] = useState({
         center:{
-            latitude:37.78825,
-            longitude:-122.4324
+            latitude:-22.7869589,
+            longitude:-45.1800201
         },
         zoom:16,
         pitch:0,
         altitude:0,
         heading:0
     });
-
-    useEffect(()=>{
+     useEffect(()=>{
         Geocoder.init(MapsAPI, {language:'pt-br'});
         getMyCurrentPosition();
     }, []);
-
     const getMyCurrentPosition = () => {
-        Geolocation.getCurrentPosition((info)=>{
-            console.log("COORDENADAS: ", info.coords);
-        },(error)=>{
-
-        });
-    } 
-
-    const [Search,setSearch] = useState('');
-
+            Geolocation.getCurrentPosition(async (info)=>{
+                console.log("COORDENADAS: ",info.coords);
+            },(error)=>{
+                
+            });
+        }
     return (
         <Container>
-                <Header>
-                    <HeaderContent>
-                        <Menu onPress={()=>('HomeDrawer')}>
-                            <MenuIcon source={require("../../assets/Images/Icons/menuIcon.png")} resizeMode='contain'/>   
-                        </Menu>
-                            <InputSearch 
-                                value={Search} 
-                                onChangeText={t=>setSearch(t)} 
-                                placeholder="Para onde você vai?" 
-                                placeholderTextColor={color.Cinza}/>
-                            <SearchButton onPress={()=>{}}>
-                                    <SearchIcon source={require("../../assets/Images/Icons/searchIcon.png")}/>
-                            </SearchButton>   
-                    </HeaderContent>
-                </Header>        
-                <MapView 
-                    ref={map}
-                    style={{flex:1}}
-                    provider="google"
-                    camera={maploc}
-                ></MapView>   
+            <StatusBar barStyle="dark-content"/>
+            <MapView
+                ref={map}
+                style={{flex:1}}
+                provider="google"
+                camera={maploc}
+            >
+            
+            </MapView>  
         </Container>
     );
 }

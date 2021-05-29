@@ -40,7 +40,7 @@ export const ViewStyleTitle = styled.View`
 `;                         
    /* Estilização do título */
 export const Title = styled.Text`
-   font-family: 'Montserrat-SemiBold';
+   font-family: 'Montserrat-Medium';
    font-size:44px;
    color:${color.Branco};
    text-shadow: 1px 1px 1px ${color.CinzaEscuro};
@@ -54,7 +54,7 @@ export const ViewStyleSubtitle = styled.View`
 `;
         /* Estilização do subtítulo */
 export const Subtitle = styled.Text`
-   font-family: 'Montserrat-Medium';
+   font-family: 'Montserrat-Regular';
    font-size:15px;
    color:${color.Branco}; 
    text-shadow: 1px 1px 1px ${color.Cinza};

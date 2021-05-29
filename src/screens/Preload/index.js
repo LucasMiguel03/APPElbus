@@ -1,6 +1,9 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';
+import fonts, { assets } from '../../../react-native.config';
+
 import { 
   ScreenInitialLogin,
   Image,
@@ -54,8 +57,9 @@ const Preload = (props) => {
     
     return (
     <ScreenInitialLogin> 
+        <StatusBar barStyle="light-content"/>
                 {/* Imagem da primeira tela de login e container */}
-        <Image  source={require('../../assets/Images/imagemGraal.png')}>  
+        <Image  source={require('../../assets/Images/ImagemGraal.png')}>  
             {/* Container do conteúdo */}
             <ViewStylePage> 
             {/* Container do logo Busaqui */}
@@ -72,9 +76,11 @@ const Preload = (props) => {
                         {/* Container do subtítulo */}
                     <ViewStyleSubtitle>
                         {/* Subtítulo centralizado em linha abaixo do título */}
-                        <Subtitle>Assistente de mobilidade urbana, que</Subtitle>
-                        <Subtitle>mostra a localização em tempo real dos</Subtitle>
-                        <Subtitle>ônibus de sua cidade.</Subtitle>
+                        <Subtitle> 
+                            Assistente de mobilidade urbana, que {'\n'}
+                            mostra a localização em tempo real dos {'\n'}
+                            ônibus de sua cidade.
+                        </Subtitle>
                     </ViewStyleSubtitle>
                 </ContainerText>
                 <ButtomSubscribe
