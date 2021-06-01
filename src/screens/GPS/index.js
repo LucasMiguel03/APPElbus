@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import {Container,ViewImage,GpsImage,ViewText,
         Title,Subtitle,ViewButtom,
         ButtomGps,TextButtom } from './styled';

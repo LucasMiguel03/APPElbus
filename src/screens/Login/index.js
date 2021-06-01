@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-
 import { StatusBar, Platform, ActivityIndicator } from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation';
 import { connect } from 'react-redux';

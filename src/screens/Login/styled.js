@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import color from '../../assets/color';
-import fonts, { assets } from '../../../react-native.config';
+
 
 export const Container = styled.KeyboardAvoidingView`
     flex: 1;

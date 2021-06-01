@@ -1,60 +1,48 @@
 import styled from 'styled-components/native';
-import color from '../../assets/color.js';
+import color from '../../styles/color';
 
-export const Container = styled.View`
-    flex:1;
-    background-color: #FF0000;
+export const Container = styled.SafeAreaView`
+    flex:1; 
+    background-color:${color.CinzaSemiTransparente};
 `;
-
-
-
-
-
-
-
-
-// export const IntineraryArea = styled.View`
-//     position: absolute;
-//     left: 10px;
-//     right: 10px;
-//     top: 50px;
-//     background-color: #FFF;
-//     border-radius: 5px;
-//     box-shadow: 0px 0px 4px #999;
-//     border-color: #EEE;
-//     border-width: 1px;
-// `;
-
-// export const IntineraryItem = styled.TouchableHighlight`
-//     padding: 15px 20px;
-//     border-bottom-color: #EEE;
-//     border-bottom-width: 1px; 
-// `;
-
-// export const IntineraryLabel = styled.View`
-//     flex-direction: row;
-//     align-items: center;
-//     margin-bottom: 10px; 
-// `;
-
-// export const IntineraryPoint = styled.View`
-//     width: 10px;
-//     height: 10px;
-//     border-radius: 5px;
-//     background-color: ${props=>props.color};
-// `;
-
-// export const IntineraryTitle = styled.Text`
-//     margin-left: 10px;
-//     color: #999;
-// `;
-
-// export const IntineraryValue = styled.Text`
-//     color: #000;
-//     font-size: 16px;
-// `;
-// export const IntineraryPlaceHolder = styled.Text`
-//     color: #555;
-//     font-size: 16px;
-//     text-align: center;
-// `;
+export const Header = styled.View`
+    background-color:${color.Azul};
+    width:100%;
+    height:106px;
+    justify-content:center;
+    align-items:center;
+`;
+export const HeaderContent = styled.View`
+    width:84%;
+    height:46%; 
+    background-color:${color.Branco};
+    border-radius:6.62px;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+`;
+export const Menu = styled.TouchableOpacity`
+    width:9.6%;
+    height:68%; 
+    justify-content:center;
+    align-items:center;  
+`;
+export const MenuIcon = styled.Image`
+    width:76%;
+    height:76%;  
+`;
+export const InputSearch = styled.TextInput`
+    width:64%;
+    height:120%;  
+    margin-left:13px;
+    color:${color.Preto};
+`;
+export const SearchButton = styled.TouchableOpacity`
+    width:10.5%;
+    height:72%;   
+    margin-left:12px;
+`;
+export const SearchIcon = styled.Image`  
+    width:93%;
+    height:93%;
+`;
