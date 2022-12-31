@@ -1,95 +1,82 @@
-import styled from 'styled-components/native';
-import color from '../../assets/color';
+import styled,{ css } from 'styled-components/native';
+import color from '../../assets/color.js';
+import { Platform } from 'react-native';
 
-export const Container = styled.SafeAreaView`
-    flex:1; 
-    background-color:${color.CinzaSemiTransparente};
+export const Container = styled.View`
+    flex:1;
 `;
-// export const Header = styled.View`
-//     background-color:${color.Azul};
-//     width:100%;
-//     height:106px;
-//     justify-content:center;
-//     align-items:center;
-// `;
-// export const HeaderContent = styled.View`
-//     width:84%;
-//     height:46%; 
-//     background-color:${color.Branco};
-//     border-radius:6.62px;
-//     flex-direction:row;
-//     justify-content:center;
-//     align-items:center;
-// `;
-// export const Menu = styled.TouchableOpacity`
-//     width:9.6%;
-//     height:68%; 
-//     justify-content:center;
-//     align-items:center;  
-// `;
-// export const MenuIcon = styled.Image`
-//     width:76%;
-//     height:76%;  
-// `;
-// export const InputSearch = styled.TextInput`
-//     width:64%;
-//     height:120%;  
-//     margin-left:13px;
-//     color:${color.Preto};
-// `;
-// export const SearchButton = styled.TouchableOpacity`
-//     width:10.5%;
-//     height:72%;   
-//     margin-left:12px;
-// `;
-// export const SearchIcon = styled.Image`  
-//     width:93%;
-//     height:93%;
-// `;
-{/* <ItineraryArea>
-                        <Itinerary>
-                            <>
-                                <ItineraryLabel>
-                                    <ItinerryPoint/>
-                                    <ItineraryTitle>Origem</ItineraryTitle>
-                                </ItineraryLabel>
-                                <ItineraryValue>...</ItineraryValue>
-                            </>
-                        </Itinerary>
-                    </ItineraryArea> */}
-
-export const ItineraryArea = styled.View`
-    position:absolute;
-    left:10px;
-    right:10px;
-    top:50px;
-    background-color:#fff;
-    border-radius:5px;
-    box-shadow:0px 0px 4px #999;
-`;
-export const Itinerary = styled.TouchableHighlight`
-    padding:15px 20px;
-    border-bottom-color:#999;
-    border-bottom-width:1px;
-
-`;
-export const ItineraryLabel = styled.View`
-    flex-direction:row;
+export const SearchArea = styled.View`
+    position: absolute;
+    left: 10px;
+    right: 10px;
     align-items:center;
+    height:74%;
+    width:92%;
+
+    ${Platform.select({
+        ios:css`
+        margin-top:25px;
+        background-color:#0000;
+        `,
+
+        android:css`
+        margin-top:18px;
+        `
+    })}
 `;
-export const ItineraryPoint = styled.View`
-    width:10px;
-    height:10px;
-    border-radius:5px;
-    background-color:${props=>props.color};
+export const Area = styled.View`
+    height:41.37px;
+    width:94%;
+    border-width: 3px;
+    border-radius: 2px;
+    border-color: ${color.CinzaSombra};
+    border-bottom-width: 0;  
+    elevation: 5;
+    flex-direction:row; 
+    justify-content:center;
+    align-items:center; 
 `;
-export const ItineraryTitle = styled.Text`
-    margin-left:10px;
-    color:#000;
+export const Menu = styled.TouchableHighlight`
+    height:42px;
+    width:12%;
+    justify-content:center;
+    align-items:center;
+    background-color:${color.Branco};   
 `;
-export const ItineraryValue = styled.Text`
+export const MenuIcon = styled.Image`
+    height:24px;
+    width:24px;
 `;
-export const ItineraryPlaceholder = styled.Text`
-    color:#aaa;
+export const SearchInput = styled.TextInput`
+    height:42px;
+    width:88%;
+    background-color: ${color.Branco};
+    color:${color.PretoBusaqui};
+    padding-left:8px;
     font-size:16px;
+`;
+export const Result = styled.TouchableHighlight`
+    padding:2px;
+`;
+
+export const ResultText = styled.Text`
+   color:${color.PretoBusaqui};
+   font-size:16px;
+   margin-left:8px;
+   margin-right:8px;
+`;
+
+export const Scroll = styled.ScrollView`
+    width:92%;
+    margin-bottom:10px;
+    background-color:${color.Branco};                        
+`;
+
+export const ViewButton = styled.View`
+    width:120px;
+    height:40px;
+    /* position:absolute; */
+    background-color:#cfc;
+    justify-content:flex-end;
+
 `;
