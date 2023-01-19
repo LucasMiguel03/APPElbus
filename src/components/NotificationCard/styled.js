@@ -37,13 +37,13 @@ export const LogoMask = styled.Image`
 
 export const Title = styled.Text`
     font-size: 14px;
-    color: ${color.Azul};
+    color: ${color.Primaria};
     font-family: 'Montserrat-Medium';
     height: 20px;
 `;
 
 export const Subtitle = styled.Text`
     font-size: 10px;
-    color: ${color.Azul};
+    color: ${color.Primaria};
     font-family: 'Montserrat-Medium';
 `;

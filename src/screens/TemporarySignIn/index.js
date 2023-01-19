@@ -137,7 +137,7 @@ const SignIn = (props) => {
 
                     {loading &&
                         <LoadingArea>
-                            <ActivityIndicator size="large" color={color.Branco} />
+                            <ActivityIndicator size="large" color={color.Fundo1} />
                         </LoadingArea>
                     }
 

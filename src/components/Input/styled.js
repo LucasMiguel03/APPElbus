@@ -33,11 +33,11 @@ export const InputLabel = styled.Text`
     font-size: 13px;
     left: 40px;
     height: 20px;
-    background-color: ${color.Branco};
+    background-color: ${color.Fundo1};
     border-left-width: 4px;
-    border-left-color: ${color.Branco};
+    border-left-color: ${color.Fundo1};
     border-right-width: 4px;
-    border-right-color: ${color.Branco};
+    border-right-color: ${color.Fundo1};
     text-align: center;
     z-index: 3;
     font-family: 'Montserrat-SemiBold';

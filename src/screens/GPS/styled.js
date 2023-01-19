@@ -7,7 +7,7 @@ import color from '../../assets/color';
 
 //Container da pagina Inteira - SafeAreaView
 export const Container = styled.SafeAreaView`
-    background-color: ${color.Branco};
+    background-color: ${color.Fundo1};
     height:100%;
     justify-content:space-evenly;
 `;
@@ -56,14 +56,14 @@ export const ButtomGps = styled.TouchableOpacity`
     width: 150px;
     height: 56px;
     border-radius: 28px;
-    background-color: ${color.Azul};
+    background-color: ${color.Primaria};
     align-items: center;
     justify-content: center;
     align-self:center;
 `;
 /* //Texto do botão de entrar */
 export const TextButtom = styled.Text`
-    color:${color.Branco};
+    color:${color.Fundo1};
     font-size:18px;
     font-family: 'Montserrat-SemiBold';
 `;

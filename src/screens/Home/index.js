@@ -394,7 +394,7 @@ const Home = props => {
             origin={fromLoc.center}
             destination={toLoc.center}
             strokeWidth={5}
-            strokeColor={color.Azul}
+            strokeColor={color.Primaria}
             apikey={MapsAPI}
             onReady={handleDirectionsReady}
           />

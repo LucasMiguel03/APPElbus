@@ -10,7 +10,7 @@ export const Header = styled.View`
     flex-direction: row;
     /* background-color: green; */
     align-items: center;
-    background-color: ${color.Branco};
+    background-color: ${color.Fundo1};
 `;
 
 export const ListContainer = styled.View`
@@ -29,18 +29,18 @@ export const ArrowButtonImage = styled.Image`
 `;
 
 export const HeaderText = styled.Text`
-    color: ${color.Azul};
+    color: ${color.Primaria};
     font-family: 'Montserrat-Bold';
     font-size: 16px;
     margin-left: 11px;
 `;
 
 export const NotificationDate = styled.Text`
-    color: ${color.Azul};
+    color: ${color.Primaria};
     font-size: 16px;
     font-family: 'Montserrat-Medium'; 
     line-height: 20px;
     margin-left: 22px;
-    background-color: ${color.Branco};
+    background-color: ${color.Fundo1};
 `;
 

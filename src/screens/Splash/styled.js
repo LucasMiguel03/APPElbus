@@ -4,7 +4,7 @@ import color from '../../assets/color';
 /*Estilização da Splash azul com logo busaqui (tela1)*/
 export const PageSplash = styled.SafeAreaView`
    flex:1;
-   background-color:${color.Azul};
+   background-color:${color.Primaria};
    justify-content:center;
    align-items:center;
 `;

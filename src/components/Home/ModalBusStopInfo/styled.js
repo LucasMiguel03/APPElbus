@@ -28,7 +28,7 @@ export const TouchableCloseHorizontal = styled.TouchableOpacity`
 export const Content = styled.View`
     height: 100%;
     width: 72%;
-    background-color: ${color.Branco};
+    background-color: ${color.Fundo1};
     border-radius: 8px;
     /* border-width: 2px; */
     /* border-color: blue; */
@@ -59,7 +59,7 @@ export const HeaderLine = styled.View`
 
 export const Title = styled.Text`
     /* margin-top: 16px; */
-    color: ${color.Azul};
+    color: ${color.Primaria};
     font-family: 'Montserrat-Bold';
     font-size: 16px;
 `;
@@ -108,7 +108,7 @@ export const Footer = styled.View`
 export const ButtonBusLine = styled.TouchableOpacity`
     height:36px;
     width:95px;
-    background-color:${color.Azul};
+    background-color:${color.Primaria};
     margin-right:13px;
     justify-content:center;
     align-items:center;
@@ -118,7 +118,7 @@ export const ButtonBusLine = styled.TouchableOpacity`
 export const BusText = styled.Text`    
     font-family:'Montserrat';
     font-size:14px;
-    color:${color.Branco};
+    color:${color.Fundo1};
 `;
 
 export const Time = styled.Text`

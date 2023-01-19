@@ -89,7 +89,7 @@ const Notifications = (props) => {
 
     return(
         <Container>
-            <StatusBar backgroundColor={color.Branco} barStyle='dark-content'/>
+            <StatusBar backgroundColor={color.Fundo1} barStyle='dark-content'/>
             <Header>
                 <ArrowButton
                     onPress={handleBack}

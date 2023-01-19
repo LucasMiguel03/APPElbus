@@ -12,7 +12,7 @@ export const Container = styled.SafeAreaView`
 export const Page = styled.View`
     height:79%;
     width:83%;
-    background-color:${color.Branco};
+    background-color:${color.Fundo1};
     border-bottom-width:3px;
     border-color:${color.CinzaEscuro};
 `;
@@ -42,7 +42,7 @@ export const ContainerButton = styled.View`
 export const ButtonAgree = styled.TouchableOpacity`
     width:161px;
     height:56px;
-    background-color:${color.Azul};
+    background-color:${color.Primaria};
     border-radius:8px;
     
 `;
@@ -50,7 +50,7 @@ export const ButtonAgree = styled.TouchableOpacity`
 export const ButtonText = styled.Text`
     font-size:18px;
     font-weight:bold;
-    color:${color.Branco};
+    color:${color.Fundo1};
     padding:14px 18px;
     
 `;

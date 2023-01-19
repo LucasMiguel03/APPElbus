@@ -22,7 +22,7 @@ export const Header = styled.View`
 `;
 
 export const RouteTitle = styled.Text`
-    color: ${color.Azul};
+    color: ${color.Primaria};
     font-family: 'Montserrat-Bold';
     font-size: 18px;
 `;
@@ -39,7 +39,7 @@ export const RouteNumIcon = styled.Image`
 `;
 
 export const RouteNumID = styled.Text`
-    color: ${color.Azul};
+    color: ${color.Primaria};
     font-size: 16px;
     font-family: 'Montserrat-Bold';
 `;
@@ -61,7 +61,7 @@ export const BusTimeTextArea = styled.View`
 
 export const BusTimeText = styled.Text`
     margin-bottom: 15px;
-    color: ${color.Azul};
+    color: ${color.Primaria};
     font-family: 'Montserrat-Regular';
     font-size: 17px;
 `;
@@ -74,13 +74,13 @@ export const LoadBarContainer = styled.View`
 `;
 
 export const LoadBarBlue = styled.View`
-    background-color: ${color.Azul};
+    background-color: ${color.Primaria};
     height: 12px;
     border-radius: 6px;
 `;
 
 export const BlueButton = styled.TouchableOpacity`
-    background-color: ${color.Azul};
+    background-color: ${color.Primaria};
     width:207px;
     height:48px;
     justify-content: center;
@@ -91,7 +91,7 @@ export const BlueButton = styled.TouchableOpacity`
 `;
 
 export const BlueButtonText = styled.Text`
-    color: ${color.Branco};
+    color: ${color.Fundo1};
     font-family: 'Montserrat-Medium';
     font-size: 16px;
 `;
@@ -101,13 +101,13 @@ export const CloseButton = styled.TouchableOpacity`
     width: 64px;
     border-radius: 8px;
     border-width: 2px;
-    border-color: ${color.Azul};
+    border-color: ${color.Primaria};
     justify-content: center;
     align-items: center;
 `;
 
 export const CloseButtonText = styled.Text`
     font-size: 16px;
-    color: ${color.Azul};
+    color: ${color.Primaria};
     font-family: 'Montserrat-SemiBold';
 `;

@@ -20,10 +20,10 @@ export const InputLabel = styled.Text`
     width: 60px;
     height: 20px;
     left: -20px;
-    background-color: ${color.Branco};
+    background-color: ${color.Fundo1};
     text-align: center;
     margin-left: 40px;
     z-index: 1;
-    color: ${color.Azul};
+    color: ${color.Primaria};
     font-family: 'Montserrat-Medium';
 `;

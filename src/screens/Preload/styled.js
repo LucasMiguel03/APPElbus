@@ -42,7 +42,7 @@ export const ViewStyleTitle = styled.View`
 export const Title = styled.Text`
    font-family: 'Montserrat-Medium';
    font-size:44px;
-   color:${color.Branco};
+   color:${color.Fundo1};
    text-shadow: 1px 1px 1px ${color.CinzaEscuro};
    text-align: center;
 `;
@@ -56,7 +56,7 @@ export const ViewStyleSubtitle = styled.View`
 export const Subtitle = styled.Text`
    font-family: 'Montserrat-Regular';
    font-size:15px;
-   color:${color.Branco}; 
+   color:${color.Fundo1}; 
    text-shadow: 1px 1px 1px ${color.Cinza};
    text-align: center;
 `;
@@ -64,7 +64,7 @@ export const Subtitle = styled.Text`
 export const ButtomSubscribe = styled.TouchableHighlight`
    width: 169px;
    height: 56px;
-   border: 2px solid ${color.Branco};
+   border: 2px solid ${color.Fundo1};
    border-radius: 8px;
    justify-content:center; 
    align-items: center; 
@@ -72,7 +72,7 @@ export const ButtomSubscribe = styled.TouchableHighlight`
 `;
        /*Estilização do texto do botão de Entrar em Login */
 export const ButtomSubscribeText = styled.Text`
-   color: ${color.Branco};
+   color: ${color.Fundo1};
    font-size: 15px;
    font-family: 'Montserrat-Medium';
 `;

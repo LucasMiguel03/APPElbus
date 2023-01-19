@@ -49,8 +49,8 @@ export const BusInfoCard = (props) => {
         >
         <Container 
         style={IsPressed ?  
-            {backgroundColor: color.Azul} : 
-            {backgroundColor: color.Branco}}>
+            {backgroundColor: color.Primaria} : 
+            {backgroundColor: color.Fundo1}}>
 
             <LogoContainer>
                 <LogoRoute
@@ -61,9 +61,9 @@ export const BusInfoCard = (props) => {
                 <BusNumber 
                 style={IsPressed ?  
                         {color: color.Branco,
-                        backgroundColor: color.Azul} : 
+                        backgroundColor: color.Primaria} : 
                         {color: color.PretoBusaqui,
-                        backgroundColor: color.Branco}}>
+                        backgroundColor: color.Fundo1}}>
                     {BusID}
                 </BusNumber>
             </LogoContainer>
@@ -71,7 +71,7 @@ export const BusInfoCard = (props) => {
             <TextContainer>
                 <RouteTitle
                 style={IsPressed ?  
-                    {color: color.Branco} : 
+                    {color: color.Fundo1} : 
                     {color: color.PretoBusaqui}}>
 
                     {RouteName}
@@ -80,7 +80,7 @@ export const BusInfoCard = (props) => {
                 <InfoContainer>
                     <DurationText
                     style={IsPressed ?  
-                    {color: color.Branco} : 
+                    {color: color.Fundo1} : 
                     {color: color.Cinza}}>
                     
                         Chegada em
@@ -88,7 +88,7 @@ export const BusInfoCard = (props) => {
 
                     <DurationInfo
                     style={IsPressed ?  
-                    {color: color.Branco} : 
+                    {color: color.Fundo1} : 
                     {color: color.PretoBusaqui}}>
 
                         {InfoTime}
